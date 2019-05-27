@@ -4,13 +4,13 @@ import CommentBox from "components/CommentBox";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import reducers from "reducers";
-
+import Root from "Root";
 let wrapper;
 beforeEach(() => {
   wrapper = mount(
-    <Provider store={createStore(reducers, {})}>
+    <Root>
       <CommentBox />
-    </Provider>
+    </Root>
   );
 });
 it("has a text area and a button", () => {
